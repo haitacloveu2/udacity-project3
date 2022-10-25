@@ -228,10 +228,10 @@ jobs:
             if grep -q "has been executed successfully" migrations_dump.txt
             then
               echo "migration success"
-              curl --insecure https://kvdb.io/T5D2dXKjzxpjvUeuEWkBNX/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '1' 
+              curl --insecure https://kvdb.io/KtETirAU5jb9mCtpa98REN/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '1' 
             else
               echo "migration failure"
-              curl --insecure https://kvdb.io/T5D2dXKjzxpjvUeuEWkBNX/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '0'
+              curl --insecure https://kvdb.io/KtETirAU5jb9mCtpa98REN/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '0'
             fi
       - destroy-environment # Here's where you will add some code to rollback on failure      
 
